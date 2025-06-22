@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Mantenha o seu dia organizado com está Lisata de tarefas.">
+    <meta name="roboots" content="index, follow">
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="icon" href="favicon.png">
+    <script src="javaScript/index.js" defer></script>
+    <!-- link da fonte -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Rubik:ital,wght@0,300..900;1,300..900&display=swap"
+        rel="stylesheet">
+    <!-- Font awesome -->
+    <script src="https://kit.fontawesome.com/97a46d9c43.js" crossorigin="anonymous"></script>
+
+    <title>Lista de tarefas</title>
+</head>
+
+<body>
+    <div class="container">
+        <main>
+            <section id="interface">
+                <h1>Boarde de tarefas</h1>
+                <form action="">
+                    <input type="text" placeholder="Digite uma Tarefa" aria-label="Digite uma tarefa">
+                    <div class="wrapper-options-label">
+                        <label for="label-tasks">Etiqueta</label>
+                        <select name="label-tasks" id="label-tasks">
+                            <option value="" disabled selected hidden> Etiqueta</option>
+                            <option value="urgente">alta prioridade</option>
+                            <option value="medio">media prioridade</option>
+                            <option value="baixo"> baixa prioridade</option>
+                        </select>
+                    </div>
+                    <button type="submit" aria-label="Criar tarefa">+</button>
+                </form>
+                <article class="wrapper-tasks"><!-- inserir tarefas via js--></article>
+                <footer><button><i class="fa-solid fa-trash"></i></button></footer>
+            </section>
+        </main>
+    </div>
+</body>
+
+</html>
