@@ -192,6 +192,11 @@ section#interface {
                 color: #ffff;
             }
         }
+        & p[aria-label="tarefa"] {
+            color:#B1BACB;
+            font-size: clamp(1.4rem, 3vw, 1.6);
+            font-weight: 300;   
+        }
     }
 }
 
