@@ -192,11 +192,6 @@ section#interface {
                 color: #ffff;
             }
         }
-        & p {
-            color:#B1BACB;
-            font-size: clamp(1.4rem, 3vw, 1.6);
-            font-weight: 300;   
-        }
     }
 }
 
@@ -341,7 +336,7 @@ input[type="checkbox"]:checked~.wrapper-concluido {
         }
     }
 }
-input[type="checkbox"]:checked~p {
+input[type="checkbox"]:checked~p[aria-label="tarefa"] {
     text-decoration: line-through;
     color: #8F98A8;
 }
