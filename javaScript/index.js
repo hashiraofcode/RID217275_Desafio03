@@ -6,6 +6,28 @@ const getTasksFromLocalStorage = () => {
     [];
     return Data;
 }
+const countTasksTrue = (arrayTasks) => {
+    let localCount = 0;
+    arrayTasks.forEach(({checked})=> {
+        if (checked) {
+            localCount++
+        }
+    })
+    return localCount;
+}
+// função que cria um contador de tarefas;
+const setCoutTasksInDisplay = (CountTasks) => {
+     const verify = document.getElementById("element-count");
+     if (verify) {
+         verify.textContent = `${CountTasks} tarefa concluída`
+    } else {
+    const countElement = document.createElement("p");
+    countElement.id = "element-count";
+    const footer = document.getElementById("footer");
+    countElement.textContent = ` ${CountTasks} tarefa concluída`
+    footer.appendChild(countElement);
+    }
+}
 let tasksData = getTasksFromLocalStorage();
 // função que define as tarefas no local Storage;
 const setTasksInLocalStorage = (arrayTasks) => {
@@ -82,6 +104,11 @@ const setTaskTrue = (elementId) => {
         }
     });
     setTasksInLocalStorage(tasksData);
+    const count = countTasksTrue(tasksData);
+    const valueCount = count? 
+    count:
+    0;
+    setCoutTasksInDisplay(valueCount);
 }
 // função que tira o concluido da task e estila o elemento;
 const setTaskFalse = (elementId) => {
@@ -97,6 +124,12 @@ const setTaskFalse = (elementId) => {
         }
     });
     console.log(tasksData);
+    setTasksInLocalStorage(tasksData);
+    const count = countTasksTrue(tasksData);
+    const valueCount = count? 
+    count:
+    0;
+    setCoutTasksInDisplay(valueCount);
 }
 // função que cria todo o contéudo da task;
 const newTaskContent = (ArrayTasks) => {
@@ -161,4 +194,9 @@ window.onload = () => {
         const wrapper = newTaskContent(tasks);
         setTasksInDisplay(wrapper);
     });
+    const count = countTasksTrue(tasksData);
+    const valueCount = count? 
+    count:
+    0;
+    setCoutTasksInDisplay(valueCount);
 }

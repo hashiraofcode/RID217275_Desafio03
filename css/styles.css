@@ -170,7 +170,9 @@ section#interface {
     & footer {
         width: 100%;
         height: auto;
-
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
         & button {
             width: 30%;
             min-height: 4rem;
@@ -189,6 +191,11 @@ section#interface {
                 font-size: 1.8rem;
                 color: #ffff;
             }
+        }
+        & p {
+            color:#B1BACB;
+            font-size: clamp(1.4rem, 3vw, 1.6);
+            font-weight: 300;   
         }
     }
 }
